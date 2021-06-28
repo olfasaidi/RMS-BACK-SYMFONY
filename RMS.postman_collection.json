@@ -1,0 +1,1448 @@
+{
+	"info": {
+		"_postman_id": "335bc61a-5e3c-4fbe-8100-9c45c3c600f7",
+		"name": "RMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CompanyFunctions",
+			"item": [
+				{
+					"name": "GetALLCompanys",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/company",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"company"
+							]
+						},
+						"description": "get ALL Companys\nhttps://127.0.0.1:8000/api/companys /Get"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCompany",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/company/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"company",
+								"5"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/company /Delete\nit will delete all company users as well(Delete oncascad)"
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyCompany",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"Company4\",\r\n        \"email\": \"Company4@mail.com\",\r\n        \"adresse\": \"Company4Adresse\",\r\n        \"numtel\": \"22333333\",\r\n        \"website\": \"www.secondCompany4.com\",\r\n        \"staffcount\": 11,\r\n        \"sector\": \"medicine\",\r\n        \"file\": \"jjjjjjj4.pdf\",\r\n        \"activity\": \"produceeer\",\r\n        \"description\": \"lonnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnge texxxxxxxxxxxxxxt\",\r\n        \"period_subscription\": \"2020-05-01T00:00:00+00:00\",\r\n        \"databasesize\": 1024,\r\n        \"slatype\": \"type2\",\r\n        \"supporttype\": \"support3\",\r\n        \"status\": true\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/company/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"company",
+								"6"
+							]
+						},
+						"description": "Modify Company By ID\nhttps://127.0.0.1:8000/api/company /put\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "UserFunctions",
+			"item": [
+				{
+					"name": "ModifyUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nom\": \"User3name\",\r\n        \"prenom\": \"user3prename\",\r\n        \"dateNaissance\": \"1996-03-04\",\r\n        \"email\": \"user3@email.com\",\r\n        \"adresse\": \"adrresUser3\",\r\n        \"codepostal\": \"22\",\r\n        \"city\": \"nabeul\",\r\n        \"numTel\": \"25222555\",\r\n        \"sexe\": \"homme\",\r\n        \"role\": \"ROLE_ADMIN\",\r\n        \"motpass\": \"12345\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/user/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"10"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/modify"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/delete/17",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete",
+								"17"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/delete"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ProjectFunction",
+			"item": [
+				{
+					"name": "GetAllProjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"project"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/project /Get"
+					},
+					"response": []
+				},
+				{
+					"name": "AddProject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"titre\": \"Project10\",\r\n        \"logo\": \"Project10.png\",\r\n        \"status\": \"1\",\r\n        \"territories\": \"nabeul\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"project"
+							]
+						},
+						"description": "http://127.0.0.1:8000/api/project /Post\n\nAddcreator ,AddPresentation need to instans of object\nmodify the addProjectCreator and AddPresentation to get Id  and Convert it to objects"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProject",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" :\"7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/project/9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"project",
+								"9"
+							]
+						},
+						"description": "http://127.0.0.1:8000/api/project /Delete"
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyProject",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"titre\": \"Project10\",\r\n        \"logo\": \"Project1_other.png\",\r\n        \"status\": \"0\",\r\n        \"territories\": \"nabeul\"\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/project/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"project",
+								"10"
+							]
+						},
+						"description": "http://127.0.0.1:8000/api/project /put"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ProductFunctions",
+			"item": [
+				{
+					"name": "GetAllProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/product /Get\n"
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\r\n    \"nom\": \"product8\",\r\n    \"logo\": \"product8.png\",\r\n    \"type\": \"for something\",\r\n    \"prix\": 20.0,\r\n    \"description\": \"loooooong texxxxxxxte\",\r\n    \"project\" : \"10\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/product /post"
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Product1\",\r\n    \"logo\": \"product11111.png\",\r\n    \"type\": \"for something else\",\r\n    \"prix\": 25.0,\r\n    \"description\": \"loooooong texxxxxxxte\",\r\n    \"presentations\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product/9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"9"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/product /put"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"3"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/product /Delete"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "MediaFunctions",
+			"item": [
+				{
+					"name": "GetAllMedia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/media",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"media"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/media"
+					},
+					"response": []
+				},
+				{
+					"name": "AddMedia",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "603eed2b-65b7-44d6-bf5c-9e17b60a42c1",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"titre\": \"video3\",\r\n        \"description\": \"video Of company \",\r\n        \"type\": \"video\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/media",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"media"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/media /Post"
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyMedia",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n        \"titre\": \"notLogo3\",\r\n        \"description\": \"logo Of company \",\r\n        \"lien\": \"www.jjhfhhf.tn/logo3.png\",\r\n        \"type\": \"image\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/media/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"media",
+								"3"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/media /Put"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMedia",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/media/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"media",
+								"6"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/media"
+					},
+					"response": []
+				},
+				{
+					"name": "UploadFileMedia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image\n",
+									"type": "file",
+									"src": "/C:/Users/sqifgo/Downloads/background.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/media/3/upload",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"media",
+								"3",
+								"upload"
+							]
+						},
+						"description": "http://127.0.0.1:8000/api/media/4/upload"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ReferanceFunctions",
+			"item": [
+				{
+					"name": "GetAllReferance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/referance",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"referance"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/referance /Get"
+					},
+					"response": []
+				},
+				{
+					"name": "AddReferance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titre\": \"referance2\",\r\n    \"description\": \"lonnnnnng text tooooooooooooooooooooooooooooooo referance 2\"\r\n\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/referance",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"referance"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/referance /Post"
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyReferance",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"titre\": \"referance1_test\",\r\n        \"description\": \"lon____--------------------_____________________ger text to referance 1\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/referance/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"referance",
+								"1"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/referance  /put"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteReferance",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/referance/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"referance",
+								"5"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/referance"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PresentationFunctions",
+			"item": [
+				{
+					"name": "GetAllPresentations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/presentation",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"presentation"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/presentation"
+					},
+					"response": []
+				},
+				{
+					"name": "AddPresentation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"titre\": \"Presentation6\",\r\n        \"territories\": \"Nabeul\",\r\n        \"presentation_creator\":\"12\",\r\n        \"project\" : [\"3\"],\r\n        \"media\" : [\"2\",\"3\"]\r\n}\r\n        \r\n        ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8000/api/presentation",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"presentation"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/presentation /post"
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyPresentation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"titre\": \"Presentation4\",\r\n        \"territories\": \"Tunis\",\r\n        \"project\" : [\"5\"],\r\n        \"media\" : [\"3\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/presentation/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"presentation",
+								"4"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/presentation /put\nyou could add referance[]"
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePresentation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/presentation/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"presentation",
+								"4"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/presentation/{id} /Delete\nor \nhttps://127.0.0.1:8000/api/presentation with \"id\":value in body"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "LogFunctions",
+			"item": [
+				{
+					"name": "GetAllLogs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logs",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logs"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/logs /Get\n"
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserLog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/log/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"log",
+								"10"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/log/{id} /Get\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "EquipFunction",
+			"item": [
+				{
+					"name": "AddEquip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"leader\" : 9,\n    \"members\" : [10,11]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/equip",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"equip"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/equip /Get\nadd script to control added mebers check if they are in other team or not"
+					},
+					"response": []
+				},
+				{
+					"name": "getEquipMember",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/equip/3/members",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"equip",
+								"3",
+								"members"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/equip/{EquipId}/members"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllEquips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/equip",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"equip"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/equips /get\nsugesst add Equip name"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEquip",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 12\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8000/api/equip",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"equip"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/equip /Delete\nmembers of equip will not be removed"
+					},
+					"response": []
+				},
+				{
+					"name": "AddMembers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"members\" : [12]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8000/api/equip/13/addMembers",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"equip",
+								"13",
+								"addMembers"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/equip/{EquipId}/addMembers /Post"
+					},
+					"response": []
+				},
+				{
+					"name": "removeMembers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"members\" : [12]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8000/api/equip/13/removeMembers",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"equip",
+								"13",
+								"removeMembers"
+							]
+						},
+						"description": "https://127.0.0.1:8000/api/equip/{EquipID}/removeMembers /Post"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "UserSignUp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n    \t\"company\": \"4\",\r\n        \"nom\": \"User22name\",\r\n        \"prenom\": \"user22prename\",\r\n        \"dateNaissance\": \"1996-02-04T00:00:00+00:00\",\r\n        \"email\": \"user22@email.com\",\r\n        \"adresse\": \"adrresUser22\",\r\n        \"codepostal\": \"22\",\r\n        \"city\": \"nabeul\",\r\n        \"numTel\": \"25222555\",\r\n        \"sexe\": \"homme\",\r\n        \"role\": \"ROLE_ADMIN\",\r\n        \"motpass\": \"123\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup"
+					]
+				},
+				"description": "http://127.0.0.1:8000/api/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"email\": \"user7@email.com\",\r\n        \"motpass\": \"123\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login_check",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login_check"
+					]
+				},
+				"description": "https://127.0.0.1:8000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Company",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n    \t\"name\": \"Company28\",\r\n        \"email\": \"Company28@mail.com\",\r\n        \"motpass\": \"123\",\r\n        \"adresse\": \"adressCompany13\",\r\n        \"codepostal\": \"22\",\r\n        \"city\": \"nabeul\",\r\n        \"numtel\": \"22555555\",\r\n        \"website\": \"www.Company13.com\",\r\n        \"staffcount\": 25,\r\n        \"sector\": \"informatique\",\r\n        \"file\": \"hdhhdhhdskksllc.zip\",\r\n        \"activity\": \"produceCompany13\",\r\n        \"description\": \"looooooooooooooooong texxxxxxxxxxxxte\",\r\n        \"period_subscription\": \"2020-04-01T00:00:00+00:00\",\r\n        \"databasesize\": 255,\r\n        \"slatype\": \"type3\",\r\n        \"supporttype\": \"support3\",\r\n        \"status\": true,\r\n        \"employee\":[[\"saifeddin1996@gmail.com\",\"omarsaifeddingorrab@gmail.com\"],[\"manager@mail.com\"],[\"editor@mail.com\",\"editor2@email.com\"],[\"viewer@mail.com\"]]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company"
+					]
+				},
+				"description": "CreatCompany\nhttps://127.0.0.1:8000/api/company /Delete"
+			},
+			"response": []
+		},
+		{
+			"name": "refreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"refresh_token\": \"c6749843abda025df1e673046df1748d3b88eb945e09b78da0e7fa69fba0db48ca030765312d74bbc5c0dec4fd97116b39a6dec7ab59b1c779431a971ab9a661\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/refresh",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh"
+					]
+				},
+				"description": "http://127.0.0.1:8000/api/token/refresh"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1ODc4NTk5MjgsImV4cCI6MTU4Nzg2MzUyOCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6InVzZXIzQGVtYWlsLmNvbSJ9.CCNV82Xg2ifnSpSaXsP5LBUuauckL2mCPZXwrZXJWRNGKdEFXjjv_pQOtU1wNwekDtsYOZwyujZpjcZmOXp0ZtSAPSthfmcfGMV9_ElpV2EdjfE-xtrtQPbVYfXGs3WxAt9kEuGc5kg5VGXc9y_yoceJxTBYpezywoJe4P-LRde1sKUflbwhc3lJ5nG6xxrkXELq2T8VSqXzglAxWYPpaPF3f57iNF4Yh81mveFUyrcATwrlbkMx8YvhMEFQBS5tzfn0JfDyqeinznCgV2K2Ul91yEbhiQGY9OKeuGZXyvtFUTZ9PeXYu_y_GxdHwgtzxgFh_kM8B-WrT5JuBMV0inyf1RA-VpMtKO2VucSyQt_OM0t6KH4CLdWnnT1VqD_D1OCh9A99Rpa3WlMVN3kPfNFkOPLriz7QhCe8f2X9Tgt7tQ_uAz2GR7ABwEvoCEm6e3OdWC8zRtG2zbQsQvS3EZz6zbL06tDP8v3xTs87RX7OAUZ_FSXHAbC06SlA4HM_OteZIxtE4-iL7adiEzt796paWispR8uj0Lo-y2gYtoveDbF30n6ii4GYmwXZGIqfR3VIY62NYzAs7m09qg63s5fAg7haLliOAYd4CWF9PqPEP-HwZEXm4-gK03MG7jwDUe8fKq8BBCXO8mIRZL4dNVbPMSvsyv42XakNhcBqe00",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "316a33d2-da77-4705-b284-e62c2a08fcd2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7dc9a8a3-d1c4-4237-802d-e421a3885a56",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
